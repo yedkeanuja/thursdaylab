@@ -11,7 +11,7 @@ public  class CheckName extends Exception
 {
 		void validateName(String name) throws InvalidNameException
 		{
-			String[] names= {"Ankita","Rutuja","Vanitha","Anjali"};			//passing array name
+			String[] names= {"Anuja","Rutuja","Vina","Ankita"};			//passing array name
 			boolean found=false;		
 			for(String n: names)
 			{
