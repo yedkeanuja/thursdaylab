@@ -1,35 +1,38 @@
 //Author:Anuja yedke
 
 package com.question1;
-	import java.util.Scanner;
+import java.util.Scanner;
 
-	class Exception1 {
-	 
-		public static void main(String arg[])
-	    {  
-			try
-			{
-				// declare and initialize here.
-				int a,b,c;
-				Scanner KB=new Scanner(System.in);
-				
-				// input numbers here.
-				System.out.print("Enter first number : ");
-				a=KB.nextInt();
-	       
-				System.out.print("Enter second number : ");
-				b=KB.nextInt();
-	       
-				//throw to catch
-				c=a/b;
-				System.out.println("Result:"+c);
-			}
-			catch(ArithmeticException e)
-			{
-				System.out.println("Error:"+e.getMessage());
-				System.out.println("Error:"+e);
-			}
-			// here program ends.
-			System.out.println("End of Program...");
-		}
+public class Exception1 {
+
+	public static void main(String[] args) throws Exception {
+		
+		int a,b,c;
+		Scanner s=new Scanner(System.in);	
+	
+	    System.out.println("Enter first number:");		//taking the user input
+	      a=s.nextInt();
+	
+	    System.out.println("Enter second number:");				//taking the user input
+	      b=s.nextInt();
+	     if(a==0 && b==0) 
+	     {
+		     throw new Exception("enter two numbers:");	//throwing exception because the 0 number entered
+	     }
+	else
+	{
+	    try
+	    {
+	      c=a/b;//performing the divide operation and throw the exception
+	     System.out.println("result is "+c);	//printing the result
+	    }
+	    catch(ArithmeticException e)//catch the divide by zero exception thrown by the try block
+	    {
+		System.out.println("performing divide by zero");
+	    }
+	    }			
+		
 	}
+	
+
+}
